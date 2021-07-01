@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 20:51:32 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/01 21:53:41 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/01 22:15:08 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,28 @@ void	ft_swap(int *a, int *b)
 
 void ft_sort_int_tab(int *tab, int size)
 {
-	int tri = 0;
 	int a = 0;
-	int b = 1;
-	while(tab[b] != '\0')
-		if (tab[a] > tab[b])
+	int b = 0;
+	while (a < size)
+	{
+		b = 0;
+		while(b < size)
 		{
-			ft_swap(&tab[a], &tab[b]);
-			a++;
+			if (tab[a] > tab[b])
+			{
+				ft_swap(&tab[a], &tab[b]);
+			}
 			b++;
 		}
+		a++;
+	}		
 }
 
 int main()
 {
-	int suite[4] = {1, 2, 3, 4};
+	int suite[4] = {5, 8, 2, 12};
 	ft_sort_int_tab(suite, 4);
-	printf("%d\n", ft_sort_int_tab);
+	for (int i = 0 ; i < 4; i++)
+    	printf(" %d, ", suite[i]);
 	return (0);
 }
