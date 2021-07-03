@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:07:39 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/01 18:19:20 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/03 18:38:23 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,11 +21,4 @@ void	ft_putstr(char	*str)
 		write(1, &str[index], 1);
 		index++;
 	}
-}
-
-int	main(void)
-{
-	char test[10] = "bgwdeedebg";
-	ft_putstr(test);
-	return 0;
 }
